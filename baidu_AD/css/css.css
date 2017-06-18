@@ -1,0 +1,70 @@
+html,
+body {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+body,
+ul,
+li {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+body {
+	position: relative; /*相对定位*/
+}
+
+.container {
+	overflow: hidden;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 400vw;
+	height: 100vh;
+	transition: left .1s; 
+	-webkit-transition: left .1s; 
+}
+.page {
+	float: left;
+	width: 100vw;
+	height: 100vh;
+}
+.page img {
+	width: 100%;
+}
+
+.navigate {
+	/*我们屏幕的宽度无法预测*/
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+	bottom: 30px;
+}
+
+.navigate li {
+	float: left;
+	margin-right: 10px;
+	border: 2px solid #abcdef;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+
+.navigate li.active {
+	background: #abcdef;
+}
+
+
+
+
+
+
+
