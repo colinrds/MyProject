@@ -1,0 +1,273 @@
+html {
+  height: 100%;
+  background: #F5F6F5;
+  overflow: hidden;
+}
+
+html, body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+div {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+table {
+  table-layout: fixed;
+}
+
+iframe {
+  background-color: white;
+}
+
+input[type="text"], input[type="password"], select {
+  font-size: 13px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background: none;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], select {
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+}
+
+textarea {
+  overflow: auto;
+  font-size: 12px;
+  resize: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  letter-spacing: .3px;
+  color: #666;
+  font: 13px/1.120 'Helvetica Neue', Helvetica, Arial, sans-serif, "Microsoft YaHei";
+}
+
+a {
+  text-decoration: none;
+  color: #777;
+}
+
+a:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+:focus {
+  outline: 0;
+}
+
+#main {
+  width: 620px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#main .logo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #999;
+}
+
+#todo {
+  overflow: hidden;
+  -moz-box-shadow: 2px 2px 11px #CCC;
+  -webkit-box-shadow: 2px 2px 11px #CCC;
+  box-shadow: 2px 2px 11px #CCC;
+}
+
+#todo .todo_list {
+  width: 620px;
+  background: #FFF;
+}
+
+#todo .todo_list li {
+  width: 560px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+}
+
+#todo .todo_list li.edit_text input[type=text] {
+  display: block;
+  width: 560px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  border: 0;
+  font-size: 18px;
+  color: #999;
+}
+
+#todo .todo_list li.edit_text label {
+  display: none;
+}
+
+#todo .todo_list li:hover.edit_text .delete {
+  display: none;
+}
+
+#todo .todo_list li input[type=text] {
+  display: none;
+}
+
+#todo .todo_list label {
+  width: 560px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 200;
+  color: #999;
+  display: block;
+}
+
+#todo .todo_list li .delete {
+  display: none;
+}
+
+#todo .todo_list .toggle {
+  height: 50px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+#todo .todo_list li:hover .delete {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  display: block;
+  cursor: pointer;
+  background: url("../images/delete_icon.png") no-repeat;
+  background-size: 20px 20px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+#todo .todo_list .completed {
+  text-decoration: line-through;
+  color: #CCC;
+}
+
+#todo .add_new {
+  position: relative;
+  padding-left: 40px;
+  background: #FFF;
+  border-bottom: 1px solid #EEE;
+}
+
+#todo .add_text {
+  width: 560px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+  background: #FFF;
+  color: #999;
+  border: 0;
+  padding: 0 10px;
+}
+
+#todo .all_btn {
+  width: 24px;
+  height: 24px;
+  background: url("../images/all_btn_icon.png") no-repeat;
+  background-size: 24px 24px;
+  position: absolute;
+  left: 10px;
+  top: 23px;
+  display: block;
+  cursor: pointer;
+}
+
+.footer {
+  width: 600px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #FFF;
+  position: relative;
+  text-align: center;
+  color: #999;
+}
+
+.footer a {
+  padding: 3px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.footer a.hover {
+  border: 1px solid #EEE;
+}
+
+.footer .info {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 40px;
+  line-height: 40px;
+  color: #CCC;
+}
+
+.footer .clear_completed {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
+  background: url("../images/clear_icon.png") no-repeat 10px 10px;
+  background-size: 20px 20px;
+}

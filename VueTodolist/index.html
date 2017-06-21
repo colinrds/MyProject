@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tudolist</title>
+</head>
+
+<body>
+  <div id="main">
+    <h1 class="logo">todos</h1>
+    <div id="todo">
+      <div class="add_new"><input type="text" class="add_text" placeholder="What needs to be done?" v-model="addText" @keyup.enter="addNew">
+        <input
+          type="checkbox" class="all_btn" v-model="isAll"></input>
+      </div>
+      <div class="todo_list">
+        <ul>
+          <li v-for="(todo,index) in filteredTodos" :class="{edit_text:todo == editList}">
+            <input class="toggle" type="checkbox" v-model="todo.completed">
+            <label :class="{completed:todo.completed}" @dblclick="editTodo(todo)">{{todo.title}}</label>
+            <button class="delete" @click="removeTodo(index)"></button>
+            <input type="text" v-model="todo.title" v-focus="todo == editList" @blur="doneEdit(todo)" @keyup.esc="cancleEdit(todo)" @keyup.enter="doneEdit(todo)">
+          </li>
+        </ul>
+      </div>
+      <div class="footer" v-show="todos.length">
+        <a href="#/all" :class="{hover:hashName=='all'}">全部</a>
+        <a href="#/active" :class="{hover:hashName=='active'}">未完成</a>
+        <a href="#/completed" :class="{hover:hashName=='completed'}">已完成</a>
+        <div class="info">{{remain}} {{todos.length > 1 ? 'items' : 'item'}} left</div>
+        <div class="clear_completed" @click="clear"></div>
+      </div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
