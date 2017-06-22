@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>编辑器</title>
+</head>
+<body>
+
+<label>图片<input type="file" name="file" id="image"></label>
+<label><input type="button" id="btn" value="提交"></label>
+<script type="text/javascript" src="/sim/scripts/jquery.min.js"></script>
+<script type="text/javascript">
+  $('#btn').click(function(event) {
+   var data = new FormData();
+   files = $('#image')[0].files;
+   if(files) {
+     console.log(files[0]);
+     data.append("upload", files[0]);
+     console.log(files);
+     $.ajax({
+       type: 'post',
+       dataType: 'json',
+       url: '/upload',
+       data: data,
+       contentType: false,
+       processData: false,
+       success: function (data, textStatus) {
+         $('#img_box').html('<img src="'+data.url+'">');
+       },
+       error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+       }
+     });
+   }
+  });
+</script>
+</body>
+</html>
